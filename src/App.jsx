@@ -27,6 +27,10 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <SignupPage />,
       },
+      {
+        path: "*", // Catch-all route inside PublicLayout
+        element: <LoginPage />,
+      },
     ],
   },
   {
@@ -57,10 +61,10 @@ const router = createBrowserRouter([
       // },
     ],
   },
-  {
-    path: "*", // Catch-all for 404 errors
-    element: <LoginPage />,
-  },
+  // {
+  //   path: "*", // Catch-all for 404 errors
+  //   element: <LoginPage />,
+  // },
 ]);
 
 function App() {
