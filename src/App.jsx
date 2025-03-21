@@ -1,4 +1,5 @@
 import React from "react";
+// import "antd/dist/antd.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PublicLayout from "./components/items/layouts/PublicLayout";
 import ClientLayout from "./components/items/layouts/ClientLayout";
@@ -7,6 +8,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import HomePage from "./pages/HomePagePublic/HomePage";
 import DashboardPage from "./pages/Client/Dashboard/Dashboard";
 import AdminDashboardPage from "./pages/Admin/Dashboard/Dashboard";
+import SignupPage from "./pages/SignupPage/SignupPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LoginPage />,
+      },
+      {
+        path: "/signup",
+        element: <SignupPage />,
       },
     ],
   },
